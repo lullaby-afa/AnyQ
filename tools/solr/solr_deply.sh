@@ -31,7 +31,7 @@ function solr_start() {
         -jar ${solr_home}/example/start.jar &
 
     # check solr service
-    sleep 20s #time needed to start solr, maybe longer
+    sleep 60s #time needed to start solr, maybe longer
     curl "http://localhost:$solr_port/solr"
     if [[ $? -ne 0 ]]; then
         echo "solr[$solr_port] start failed!"
